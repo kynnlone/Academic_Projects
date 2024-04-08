@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class main {
+    public static void main(String[ ] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter a METAR abbreviation: ");
+        String userInput = scan.nextLine();
+        int count = 0;
+
+        while (true) {
+            if (userInput.equals("+")) {
+                System.out.print("heavy intensity");
+            } else if (userInput.equals("-")) {
+                System.out.print("light intensity");
+            } else if (userInput.equals("B")) {
+                System.out.println("began");
+            } else if (userInput.equals("DZ")) {
+                System.out.print("drizzle");
+            } else if (userInput.equals("E")) {
+                System.out.print("east, ended, estimated ceiling (SAO)");
+            } else if (userInput.equals("HZ")) {
+                System.out.print("haze");
+            } else if (userInput.equals("RA")){
+                System.out.print("rain");
+            } else if (userInput.equals("SN")) {
+                System.out.print("snow");
+            } else {
+                System.out.print("Invalid Abbreviation!");
+            }
+            count++;
+            if (count == 1){
+                break;
+            }
+
+    }
